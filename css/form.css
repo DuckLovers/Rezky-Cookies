@@ -1,0 +1,50 @@
+.FormPopup {
+    display: none;
+    position: fixed;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 9;
+}
+
+.FormPopup p{
+    margin-bottom: 1rem;
+    font-size: 40px;
+}
+
+
+.FormContainer {
+    width: 300px; 
+    padding: 20px; 
+    background-color: white;
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+ 
+.FormContainer input[type=password],
+.FormContainer input[type=email] { 
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.FormContainer .FormButton {
+    background-color: #04AA6D;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 5px; 
+}
+
+.FormContainer .cancel {
+    background-color: red;
+}
+
+.FormContainer .FormButton:hover{
+    opacity: 0.8;
+}

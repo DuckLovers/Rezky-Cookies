@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+/* CSS HEX */
+:root{
+    --bgSecondary: #B69C85ff;
+    --textSecondary: #87684Eff;
+    --textPrimary: #2F1D1Fff;
+    --bgTertiary: #634F47ff;
+    --bgPrimary: #EFE2D5ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Fredoka", sans-serif;
+    background-color: var(--bgPrimary);
+}
+
+/* Header */
+header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+}
+
+.Logo {
+    width: 90px;
+    margin-left: 1rem;
+    justify-self: center; 
+}
+
+.Logo img {
+    width: 100%;
+    height: auto;
+}
+
+.CompanyName {
+    align-self: center;
+}
+
+.CompanyName h1 {
+    font-size: 60px;
+    text-align: center;
+}
+
+/* Nav */
+nav { 
+    padding-bottom: .5rem;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav ul{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    list-style: none;
+    place-items: center;
+}
+
+nav ul li{
+    margin: .5rem;
+    padding: .5rem 1rem;
+    font-size: 24px;
+    text-align: center;
+    color: var(--textPrimary);
+    background-color: var(--bgPrimary);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav ul li:hover{
+    background-color: var(--bgSecondary);
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: var(--textPrimary);
+}
+
+nav ul li.Kontak {
+    background-color: var(--bgSecondary);
+}
+
+
+/* Body */
+.Body{
+    display: grid;
+    grid-template-columns: 1fr 6fr; 
+}
+
+/* SideBar */
+.SideBar ul{
+    margin: 1rem;
+    list-style: none;
+    gap: 2rem;
+}
+
+.SideBar ul li{
+    margin-bottom: 1rem;
+    font-size: 24px;
+}
+
+.SideBar ul li a{
+    text-decoration: none;
+    color: var(--textPrimary);
+}
+
+.SideBar ul li a:hover{
+    color: var(--textSecondary);
+}
+
+
+.DropdownContent {
+    display: none;
+    position: absolute;
+    background-color: var(--bgSecondary);
+    min-width: 120px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.Dropdown:hover .DropdownContent {
+    display: block;
+}
+
+.DropdownContent a {
+    color: var(--textPrimary);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Main Body */
+.MainBodyContent{
+    margin: 1rem;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--textPrimary);
+}
+
+.MainBodyContent h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--textPrimary);
+    margin-bottom: 20px;
+}
+
+.MainBodyContent p {
+    margin-bottom: 15px;
+    color: var(--textSecondary);
+}
+
+.ContactContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+
+.ContactForm textarea {
+    resize: vertical;
+}
+
+.ContactForm div {
+    margin-bottom: 1.4rem;
+}
+
+.ContactForm input, .ContactForm textarea {
+    width: 90%;
+    padding: .75rem 1.3rem;
+    font-family: "Roboto", sans-serif;
+    background: var(--bgSecondary);
+    color: var(--textPrimary);
+    border: 1px solid var(--bgTertiary);
+    border-radius: 3px;
+    resize: none;
+}
+
+.ContactForm input::placeholder, .ContactForm textarea::placeholder{
+    color: var(--bgPrimary);
+}
+
+.ContactForm input:focus, .ContactForm textarea:focus{
+    outline: none;
+    border: 1px solid #7d7d7d;
+}
+
+.BtnSubmit {
+    width: 90%;
+    padding: .75rem 1.3rem;
+    background-color: var(--bgPrimary);
+    color: var(--textPrimary);
+    border-color: var(--bgSecondary);
+    border-radius: 3px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+.BtnSubmit:hover{
+    background-color: var(--bgSecondary);
+}
+
+.ContactRight {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ContactItem {
+    display: flex;
+    gap : 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.ContactItemIcon {
+    background: var(--thirdBackgroundColor);
+    width: 60px;
+    aspect-ratio: 1;
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ContactItemIcon svg{
+    fill: var(--textPrimary);
+}
+
+.ContactitemDetail h4 {
+    margin-bottom: .6rem;
+}
